@@ -3,7 +3,7 @@ pipeline {
     stages {
         stage('Build Application') {
             steps {
-                bat 'mvn clean package'
+                bat 'mvn clean package verify sonar:sonar'
             }
             post {
                 success {
